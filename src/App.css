@@ -1,7 +1,45 @@
 .image {
-  width: 100px;
+  width: 100%;
+}
+
+.timeline-element {
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, #9b8b7b, #e1d7cd);
+  border-right: 1px solid rgb(255, 255, 255, 0.3);
 }
 
 .element-wrapper {
-  width: 300px;
+  display: flex;
+  padding-right: 30px;
+}
+
+.element-wrapper p {
+  font-size: 12px;
+}
+
+.image-wrapper {
+  flex: 1;
+  padding-right: 20px;
+  align-items: flex-end;
+  display: flex;
+}
+
+.text-wrapper {
+  width: 60%;
+}
+
+.timeline-line {
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+
+.timeline-tick {
+  border-left: 2px solid black;
+  height: 30px;
+  position: relative;
+  bottom: 15px;
 }

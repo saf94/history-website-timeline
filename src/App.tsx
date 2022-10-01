@@ -26,17 +26,21 @@ function App() {
         onWheel={onWheel}
       >
         {data.data.map(element => (
-          <div className='element-wrapper'>
-            <div>
-              <img className="image" alt="google logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/800px-Google_Images_2015_logo.svg.png" />
+          <div className='timeline-element'>
+            <div className='element-wrapper'>
+              <div className='image-wrapper'>
+                <img className="image" alt="alt text here" src={element.imageLink} />
+              </div>
+              <div className='text-wrapper'>
+                <h4>{element.year}</h4>
+                <p>{element.description}</p>
+              </div>
             </div>
-            <div>
-              <h3>{element.year}</h3>
-              <p>{element.description}</p>
-            </div>
+            <div className='timeline-line'></div>
+            <div className='timeline-tick'></div>
           </div>
         ))}
-      </ScrollMenu >
+      </ScrollMenu>
     </div>
   );
 }
