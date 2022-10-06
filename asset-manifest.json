@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/history-website-timeline/static/css/main.c5682b24.css",
+    "main.js": "/history-website-timeline/static/js/main.c535bb93.js",
+    "static/js/787.71795977.chunk.js": "/history-website-timeline/static/js/787.71795977.chunk.js",
+    "index.html": "/history-website-timeline/index.html",
+    "main.c5682b24.css.map": "/history-website-timeline/static/css/main.c5682b24.css.map",
+    "main.c535bb93.js.map": "/history-website-timeline/static/js/main.c535bb93.js.map",
+    "787.71795977.chunk.js.map": "/history-website-timeline/static/js/787.71795977.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5682b24.css",
+    "static/js/main.c535bb93.js"
+  ]
+}
