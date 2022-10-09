@@ -15,9 +15,12 @@
 }
 
 .timeline-element-section {
-  height: 500px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.top-section {
   justify-content: flex-end;
 }
 
@@ -31,6 +34,7 @@
 .element-wrapper {
   display: flex;
   padding-right: 30px;
+  margin-top: 15px;
 }
 
 .element-wrapper p {
@@ -60,10 +64,6 @@
 
 .text-year {
   margin: 0
-}
-
-.empty-section {
-  height: 150px;
 }
 
 .timeline-line {

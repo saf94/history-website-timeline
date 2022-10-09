@@ -37,12 +37,11 @@ function App() {
             return (
               <div className='timeline-element-empty' key={year}>
                 <div className='background-styled-divider'></div>
-                <div className='timeline-element-section'>
-                  <div className='empty-section'></div>
-                  <div className='timeline-line'></div>
-                  <div className='timeline-tick'></div>
-                  <h4 className='timeline-tick-year'>{year}</h4>
-                </div>
+                <div className='timeline-element-section' />
+                <div className='timeline-line'></div>
+                <div className='timeline-tick'></div>
+                <h4 className='timeline-tick-year'>{year}</h4>
+                <div className='timeline-element-section' />
               </div>
             )
           }
@@ -50,11 +49,15 @@ function App() {
           return (
             <div className='timeline-element' key={year}>
               <div className='background-styled-divider' />
-              <div className='timeline-element-section'>
-                {timelineElement.map(element => {
+              <div className='timeline-element-section top-section'>
+                {timelineElement.map((element, index) => {
+                  if (index % 2 !== 0) {
+                    return null
+                  }
                   return (
                     <div className='element-wrapper' key={element.description}>
                       <div className='image-wrapper'>
+                        {/* todo: add alt text */}
                         <img className="image" alt="alt text here" src={element.imageLink} />
                       </div>
                       <div className='text-wrapper'>
@@ -64,9 +67,31 @@ function App() {
                     </div>
                   )
                 })}
-                <div className='timeline-line'></div>
-                <div className='timeline-tick'></div>
-                <h4 className='timeline-tick-year'>{year}</h4>
+              </div>
+
+              <div className='timeline-line'></div>
+              <div className='timeline-tick'></div>
+              <h4 className='timeline-tick-year'>{year}</h4>
+
+              <div className='timeline-element-section bottom-section'>
+                {timelineElement.map((element, index) => {
+                  if (index % 2 === 0) {
+                    return null
+                  }
+                  return (
+                    <div className='element-wrapper' key={element.description}>
+                      <div className='image-wrapper'>
+                        {/* todo: add alt text */}
+                        <img className="image" alt="alt text here" src={element.imageLink} />
+                      </div>
+                      <div className='text-wrapper'>
+                        <h4 className='text-year'>{element.year}</h4>
+                        <p>{element.description}</p>
+                      </div>
+                    </div>
+                  )
+                })}
+
               </div>
             </div>
           )
