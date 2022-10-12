@@ -1,9 +1,31 @@
+.App {
+  background-image: url('../public/images/history-timeline-background.png');
+}
+
+h4 {
+  font-family: Josefin Sans;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  transition: transform 0.3s;
+  transform: scale(1.1);
+}
+
+p {
+  font-family: Lato;
+}
+
 .timeline-element {
   width: 400px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to bottom, #9b8b7b, #e1d7cd);
+  /* background-image: linear-gradient(to bottom, #9b8b7b, #e1d7cd); */
 }
 
 .timeline-element-empty {
@@ -11,7 +33,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to bottom, #9b8b7b, #e1d7cd);
+  /* background-image: linear-gradient(to bottom, #9b8b7b, #e1d7cd); */
 }
 
 .timeline-element-section {
@@ -24,12 +46,12 @@
   justify-content: flex-end;
 }
 
-.background-styled-divider {
+/* .background-styled-divider {
   width: 1px;
   height: 100%;
   background-color: rgb(255, 255, 255, 0.3);
   position: absolute;
-}
+} */
 
 .element-wrapper {
   display: flex;
@@ -81,5 +103,5 @@
 }
 
 .timeline-tick-year {
-  margin: 0
+  margin: 0;
 }
