@@ -1,18 +1,15 @@
 {
   "files": {
-    "main.css": "/history-website-timeline/static/css/main.48b73af7.css",
-    "main.js": "/history-website-timeline/static/js/main.fa43f290.js",
+    "main.css": "/history-website-timeline/static/css/main.fcfe0096.css",
+    "main.js": "/history-website-timeline/static/js/main.8e0b9070.js",
     "static/js/787.71795977.chunk.js": "/history-website-timeline/static/js/787.71795977.chunk.js",
-    "static/media/history-timeline-background.png": "/history-website-timeline/static/media/history-timeline-background.e1d832fb70b008cb3837.png",
-    "static/media/JosefinSans-VariableFont_wght.ttf": "/history-website-timeline/static/media/JosefinSans-VariableFont_wght.1bfcfba29eda50476f98.ttf",
-    "static/media/Lato-Regular.ttf": "/history-website-timeline/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
     "index.html": "/history-website-timeline/index.html",
-    "main.48b73af7.css.map": "/history-website-timeline/static/css/main.48b73af7.css.map",
-    "main.fa43f290.js.map": "/history-website-timeline/static/js/main.fa43f290.js.map",
+    "main.fcfe0096.css.map": "/history-website-timeline/static/css/main.fcfe0096.css.map",
+    "main.8e0b9070.js.map": "/history-website-timeline/static/js/main.8e0b9070.js.map",
     "787.71795977.chunk.js.map": "/history-website-timeline/static/js/787.71795977.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48b73af7.css",
-    "static/js/main.fa43f290.js"
+    "static/css/main.fcfe0096.css",
+    "static/js/main.8e0b9070.js"
   ]
 }
