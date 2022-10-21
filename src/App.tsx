@@ -1,54 +1,78 @@
 import "./App.css";
 import data from "./data.json";
-import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+import {
+  ScrollMenu,
+  // VisibilityContext
+} from "react-horizontal-scrolling-menu";
 
-type scrollVisibilityApiType = React.ContextType<typeof VisibilityContext>;
+// type scrollVisibilityApiType = React.ContextType<typeof VisibilityContext>;
 
 function App() {
   const timelineData = data.data;
   const lengthOfTimeline =
     timelineData[timelineData.length - 1].year - timelineData[0].year;
-  const timelineList = Array(lengthOfTimeline)
+  const timelineList = Array(lengthOfTimeline + 1)
     .fill(1)
     .map((x, y) => timelineData[0].year + y);
 
-  function onWheel(
-    apiObj: scrollVisibilityApiType,
-    ev: React.WheelEvent
-  ): void {
-    const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
+  console.log("timelineData", timelineData);
+  console.log("lengthOfTimeline", lengthOfTimeline);
+  console.log("timelineList", timelineList);
+  // function onWheel(
+  //   apiObj: scrollVisibilityApiType,
+  //   ev: React.WheelEvent
+  // ): void {
+  //   const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
 
-    if (isThouchpad) {
-      ev.stopPropagation();
-      return;
-    }
+  //   if (isThouchpad) {
+  //     ev.stopPropagation();
+  //     return;
+  //   }
 
-    if (ev.deltaY > 0) {
-      apiObj.scrollNext();
-    } else if (ev.deltaY < 0) {
-      apiObj.scrollPrev();
-    }
-  }
+  //   if (ev.deltaY > 0) {
+  //     apiObj.scrollNext();
+  //   } else if (ev.deltaY < 0) {
+  //     apiObj.scrollPrev();
+  //   }
+  // }
 
   return (
     <div className="App">
-      <ScrollMenu onWheel={onWheel}>
+      <ScrollMenu>
         {timelineList.map((year) => {
           const timelineElement = timelineData.filter(
             (yearElement) => yearElement.year === year
           );
 
           if (timelineElement.length === 0) {
-            return (
-              <div className="timeline-element-empty" key={year}>
-                <div className="background-styled-divider"></div>
-                <div className="timeline-element-section" />
-                <div className="timeline-line"></div>
-                <div className="timeline-tick"></div>
-                <h4 className="timeline-tick-year">{year}</h4>
-                <div className="timeline-element-section" />
-              </div>
-            );
+            return <div></div>;
+            // (
+            //   <div className="timeline-element-empty" key={year}>
+            //     <div className="background-styled-divider"></div>
+            //     <div className="timeline-element-section" />
+            //     <div className="timeline-line"></div>
+            //     <div className="timeline-tick"></div>
+            //     <h4 className="timeline-tick-year">{year}</h4>
+            //     <div className="timeline-element-section" />
+            //   </div>
+            // );
+          }
+
+          if (timelineElement.length > 1 && timelineElement.length % 2 !== 0) {
+            timelineElement.push({
+              year: 0,
+              endYear: null,
+              imageLink: "",
+              title: "",
+              description: "",
+              link: "",
+            });
+          }
+
+          let yearText = `${timelineElement[0].year}`;
+
+          if (timelineElement[0].endYear) {
+            yearText = `${timelineElement[0].year} - ${timelineElement[0].endYear}`;
           }
 
           return (
@@ -59,6 +83,7 @@ function App() {
                   if (index % 2 !== 0) {
                     return null;
                   }
+
                   return (
                     <a href={element.link}>
                       <div
@@ -67,14 +92,18 @@ function App() {
                       >
                         <div className="image-wrapper">
                           {/* todo: add alt text */}
-                          <img
-                            className="image"
-                            alt="alt text here"
-                            src={element.imageLink}
-                          />
+                          {element.imageLink && (
+                            <img
+                              className="image"
+                              alt="alt text here"
+                              src={element.imageLink}
+                            />
+                          )}
                         </div>
                         <div className="text-wrapper">
-                          <h4 className="text-year">{element.year}</h4>
+                          {element.year > 0 && (
+                            <h4 className="text-year">{yearText}</h4>
+                          )}
                           <p>{element.description}</p>
                         </div>
                       </div>
@@ -85,13 +114,14 @@ function App() {
 
               <div className="timeline-line"></div>
               <div className="timeline-tick"></div>
-              <h4 className="timeline-tick-year">{year}</h4>
+              <h4 className="timeline-tick-year">{yearText}</h4>
 
               <div className="timeline-element-section bottom-section">
                 {timelineElement.map((element, index) => {
                   if (index % 2 === 0) {
                     return null;
                   }
+
                   return (
                     <a href={element.link}>
                       <div
@@ -100,14 +130,18 @@ function App() {
                       >
                         <div className="image-wrapper">
                           {/* todo: add alt text */}
-                          <img
-                            className="image"
-                            alt="alt text here"
-                            src={element.imageLink}
-                          />
+                          {element.imageLink && (
+                            <img
+                              className="image"
+                              alt="alt text here"
+                              src={element.imageLink}
+                            />
+                          )}
                         </div>
                         <div className="text-wrapper">
-                          <h4 className="text-year">{element.year}</h4>
+                          {element.year > 0 && (
+                            <h4 className="text-year">{yearText}</h4>
+                          )}
                           <p>{element.description}</p>
                         </div>
                       </div>

@@ -1,5 +1,9 @@
+body {
+  background-image: url('https://history.ahmadiyya.uk/wp-content/uploads/2022/10/history-timeline-background.png');
+}
+
 .App {
-  background-image: url('../public/images/history-timeline-background.png');
+  /* background-image: url('wp-content/themes/amjukhistory/build/history-timeline-background'); */
 }
 
 h4 {
@@ -24,7 +28,7 @@ p {
 
 .timeline-element {
   width: 400px;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   /* background-image: linear-gradient(to bottom, #9b8b7b, #e1d7cd); */
@@ -32,7 +36,7 @@ p {
 
 .timeline-element-empty {
   width: 100px;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   /* background-image: linear-gradient(to bottom, #9b8b7b, #e1d7cd); */
