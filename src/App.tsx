@@ -75,17 +75,19 @@ function App() {
             yearText = `${timelineElement[0].year} - ${timelineElement[0].endYear}`;
           }
 
-          let amendedClassName = ''
+          let amendedClassName = "";
 
-          console.log('timelineElement.length', timelineElement.length)
+          console.log("timelineElement.length", timelineElement.length);
           if (timelineElement.length > 4) {
-            amendedClassName = '-extended'
+            amendedClassName = "-extended";
           }
 
           return (
             <div className={`timeline-element${amendedClassName}`} key={year}>
               <div className="background-styled-divider" />
-              <div className={`timeline-element-section top-section${amendedClassName}`}>
+              <div
+                className={`timeline-element-section top-section${amendedClassName}`}
+              >
                 {timelineElement.map((element, index) => {
                   if (index % 2 !== 0) {
                     return null;
@@ -123,7 +125,9 @@ function App() {
               <div className="timeline-tick"></div>
               <h4 className="timeline-tick-year">{yearText}</h4>
 
-              <div className={`timeline-element-section bottom-section${amendedClassName}`}>
+              <div
+                className={`timeline-element-section bottom-section${amendedClassName}`}
+              >
                 {timelineElement.map((element, index) => {
                   if (index % 2 === 0) {
                     return null;
