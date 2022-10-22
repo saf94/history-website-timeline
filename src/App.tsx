@@ -108,9 +108,9 @@ function App() {
                           )}
                         </div>
                         <div className="text-wrapper">
-                          {element.year > 0 && (
+                          {/* {element.year > 0 && (
                             <h4 className="text-year">{yearText}</h4>
-                          )}
+                          )} */}
                           <p>{element.description}</p>
                         </div>
                       </div>
@@ -146,9 +146,9 @@ function App() {
                           )}
                         </div>
                         <div className="text-wrapper">
-                          {element.year > 0 && (
+                          {/* {element.year > 0 && (
                             <h4 className="text-year">{yearText}</h4>
-                          )}
+                          )} */}
                           <p>{element.description}</p>
                         </div>
                       </div>
