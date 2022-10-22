@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/history-website-timeline/static/css/main.72ad1921.css",
-    "main.js": "/history-website-timeline/static/js/main.d0789670.js",
+    "main.js": "/history-website-timeline/static/js/main.4f4e6e9b.js",
     "static/js/787.71795977.chunk.js": "/history-website-timeline/static/js/787.71795977.chunk.js",
     "index.html": "/history-website-timeline/index.html",
     "main.72ad1921.css.map": "/history-website-timeline/static/css/main.72ad1921.css.map",
-    "main.d0789670.js.map": "/history-website-timeline/static/js/main.d0789670.js.map",
+    "main.4f4e6e9b.js.map": "/history-website-timeline/static/js/main.4f4e6e9b.js.map",
     "787.71795977.chunk.js.map": "/history-website-timeline/static/js/787.71795977.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.72ad1921.css",
-    "static/js/main.d0789670.js"
+    "static/js/main.4f4e6e9b.js"
   ]
 }
