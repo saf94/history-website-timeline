@@ -4,6 +4,7 @@ import {
   ScrollMenu,
   // VisibilityContext
 } from "react-horizontal-scrolling-menu";
+import Popup from "./Popup";
 
 // type scrollVisibilityApiType = React.ContextType<typeof VisibilityContext>;
 
@@ -77,7 +78,6 @@ function App() {
 
           let amendedClassName = "";
 
-          console.log("timelineElement.length", timelineElement.length);
           if (timelineElement.length > 4) {
             amendedClassName = "-extended";
           }
@@ -164,6 +164,7 @@ function App() {
           );
         })}
       </ScrollMenu>
+      <Popup />
     </div>
   );
 }

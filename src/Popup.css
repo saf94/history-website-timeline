@@ -1,0 +1,10 @@
+.popup-wrapper {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    margin-top: -40vh;
+    height: 80vh;
+    width: 400px;
+    background-color: rgb(241, 215, 215);
+
+}
