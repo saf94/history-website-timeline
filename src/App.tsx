@@ -111,7 +111,7 @@ function App() {
                           {/* {element.year > 0 && (
                             <h4 className="text-year">{yearText}</h4>
                           )} */}
-                          <p>{element.description}</p>
+                          <p>{element.title}</p>
                         </div>
                       </div>
                     </a>
@@ -149,7 +149,7 @@ function App() {
                           {/* {element.year > 0 && (
                             <h4 className="text-year">{yearText}</h4>
                           )} */}
-                          <p>{element.description}</p>
+                          <p>{element.title}</p>
                         </div>
                       </div>
                     </a>
