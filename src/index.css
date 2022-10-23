@@ -14,14 +14,13 @@ code {
 
 @font-face {
   font-family: "Lato";
-  src: url("https://history.ahmadiyya.uk/wp-content/themes/amjukhistory/fonts/Lato/Lato-Regular.ttf")
-    format("truetype");
+  src: local("Lato"), url("./fonts/Lato/Lato-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Josefin Sans";
-  src: url("https://history.ahmadiyya.uk/wp-content/themes/amjukhistory/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf")
-    format("truetype");
+  src: local("Josefin Sans"),
+    url("./fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
 }
