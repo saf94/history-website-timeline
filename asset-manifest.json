@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/history-website-timeline/static/css/main.45412e18.css",
-    "main.js": "/history-website-timeline/static/js/main.02e092f9.js",
+    "main.css": "/history-website-timeline/static/css/main.5feffed5.css",
+    "main.js": "/history-website-timeline/static/js/main.a36e03cd.js",
     "static/js/787.71795977.chunk.js": "/history-website-timeline/static/js/787.71795977.chunk.js",
+    "static/media/Background.png": "/history-website-timeline/static/media/Background.eea58fb30b0b03bd5b5c.png",
     "index.html": "/history-website-timeline/index.html",
-    "main.45412e18.css.map": "/history-website-timeline/static/css/main.45412e18.css.map",
-    "main.02e092f9.js.map": "/history-website-timeline/static/js/main.02e092f9.js.map",
+    "main.5feffed5.css.map": "/history-website-timeline/static/css/main.5feffed5.css.map",
+    "main.a36e03cd.js.map": "/history-website-timeline/static/js/main.a36e03cd.js.map",
     "787.71795977.chunk.js.map": "/history-website-timeline/static/js/787.71795977.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45412e18.css",
-    "static/js/main.02e092f9.js"
+    "static/css/main.5feffed5.css",
+    "static/js/main.a36e03cd.js"
   ]
 }
