@@ -4,6 +4,7 @@ import {
   ScrollMenu,
   // VisibilityContext
 } from "react-horizontal-scrolling-menu";
+import { LeftArrow, RightArrow } from "./Arrows";
 
 // type scrollVisibilityApiType = React.ContextType<typeof VisibilityContext>;
 
@@ -36,9 +37,23 @@ function App() {
   //   }
   // }
 
+  const Arrows = () => (
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "left",
+      }}
+    >
+      <div style={{ display: "flex", position: "relative", bottom: "200px", left: "50px" }}>
+        <LeftArrow /> <RightArrow />
+      </div>
+    </div>
+  );
+
   return (
     <div className="App">
-      <ScrollMenu>
+      <ScrollMenu Footer={Arrows}>
         {timelineList.map((year) => {
           const timelineElement = timelineData.filter(
             (yearElement) => yearElement.year === year
@@ -84,7 +99,7 @@ function App() {
 
           return (
             <div className={`timeline-element${amendedClassName}`} key={year}>
-              <div className="background-styled-divider" />
+              {/* <div className="background-styled-divider" /> */}
               <div
                 className={`timeline-element-section top-section${amendedClassName}`}
               >
@@ -122,7 +137,7 @@ function App() {
               </div>
 
               <div className="timeline-line"></div>
-              <div className="timeline-tick"></div>
+              {/* <div className="timeline-tick"></div> */}
               <h4 className="timeline-tick-year">{yearText}</h4>
 
               <div
